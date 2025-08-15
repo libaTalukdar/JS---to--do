@@ -89,3 +89,8 @@ const todoInput = document.getElementById("todoInput");
       });
       input.addEventListener("blur", save);
     }
+
+    addBtn.addEventListener("click", addTodo);
+    todoInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") addTodo();
+    });
