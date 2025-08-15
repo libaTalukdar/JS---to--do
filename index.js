@@ -3,7 +3,7 @@ const todoInput = document.getElementById("todoInput");
     const todoList = document.getElementById("todoList");
     const message = document.getElementById("message");
 
-     // Function to create a new to-do item
+    // Function to create a new to-do item
     function createTodoItem(text) {
       const li = document.createElement("li");
       li.className = "flex justify-between items-center bg-gray-50 px-3 py-2 rounded shadow-sm";
@@ -42,7 +42,7 @@ const todoInput = document.getElementById("todoInput");
       return li;
     }
 
-     // Add to-do with validation
+    // Add to-do with validation
     function addTodo() {
       const text = todoInput.value.trim();
 
@@ -67,7 +67,7 @@ const todoInput = document.getElementById("todoInput");
       todoInput.focus();
     }
 
-     // Edit to-do
+    // Edit to-do
     function editTodoItem(span) {
       const currentText = span.textContent;
       const input = document.createElement("input");
