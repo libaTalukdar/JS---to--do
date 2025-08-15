@@ -41,3 +41,28 @@ const todoInput = document.getElementById("todoInput");
 
       return li;
     }
+
+     // Add to-do with validation
+    function addTodo() {
+      const text = todoInput.value.trim();
+
+      // Clear previous message
+      message.textContent = "";
+
+      if (text === "") {
+        message.textContent = "Please Add to-do";
+        return;
+      }
+
+      // Check for duplicates
+      const items = Array.from(todoList.querySelectorAll("span")).map(span => span.textContent.toLowerCase());
+      if (items.includes(text.toLowerCase())) {
+        message.textContent = "Already added this to-do";
+        return;
+      }
+
+      const todoItem = createTodoItem(text);
+      todoList.appendChild(todoItem);
+      todoInput.value = "";
+      todoInput.focus();
+    }
