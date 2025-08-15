@@ -66,3 +66,26 @@ const todoInput = document.getElementById("todoInput");
       todoInput.value = "";
       todoInput.focus();
     }
+
+     // Edit to-do
+    function editTodoItem(span) {
+      const currentText = span.textContent;
+      const input = document.createElement("input");
+      input.type = "text";
+      input.value = currentText;
+      input.className = "flex-grow border border-gray-300 rounded px-2 py-1";
+
+      span.replaceWith(input);
+      input.focus();
+
+      function save() {
+        const newText = input.value.trim() || currentText;
+        span.textContent = newText;
+        input.replaceWith(span);
+      }
+
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") save();
+      });
+      input.addEventListener("blur", save);
+    }
