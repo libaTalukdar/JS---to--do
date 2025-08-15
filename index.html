@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>o-Do List</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+    <!-- Header -->
+    <h1 class="text-2xl font-bold text-center mb-4">To-Do List</h1>
+    <!-- Input Section -->
+    <div class="flex mb-1">
+      <input
+        type="text"
+        id="todoInput"
+        placeholder="Enter your to do"
+        class="flex-grow border border-gray-300 rounded-l px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      />
+      <button
+        id="addBtn"
+        class="bg-blue-500 text-white px-4 py-2 rounded-md ml-5 hover:bg-blue-600"
+      >
+        Add
+      </button>
+    </div>
+    </div>
+</body>
+</html>
